@@ -3,6 +3,9 @@
 ## Presentation :
 It's just a portfolio to speak about me, show my realization and a blog to share my oppinions, progressions and difficulties about code, project management, and freelancing.
 
+
+Domain : This portfolio have for objectif to convain potential client and prospect to contact me for a job. \
+Domain : This blog have for objectif to progress, share, and show my knowledge to client and prospect.
 ## 1/ Learn more about the developper and this realizations (portfolio)
 __As a__ visitor \
 __I want__ to go on the portfolio website \
@@ -22,6 +25,10 @@ __Given__ a visitor want consult the "about me" section \
 __When__ he click on the "about me" link in the navbar \
 __Then__ he is redirected on the good section in the onepage portfolio
 
+## know_my_skills :
+__Given__ a potential client want to know my skills \
+__When__ he come on my portfolio
+__Then__ he can find the skills section with all my skills
 ## all_my_project :
 __Given__ a visitor want to consult the realization section \
 __When__ he click on the realization link in the navbar \
@@ -35,7 +42,7 @@ __Then__ he is redirected outside of the portfolio on the project
 ## User stories bonus :
 __As a__ visitor \
 __I want__ to go to a specific realization \
-__In order__ to see the detail of realization (technologies, design, project management, skills) 
+__In order__ to see the detail of realization (technologies, design, project management, skills)
 
 __As a__ visitor \
 __I want__ to go to the "about me" section \
@@ -93,11 +100,21 @@ __When__ he write the comment at the bottom of the article and send it \
 __Then__ the system record the comment in the db
 __And__ reload the page to display him
 
+__Given__ a visitor leave a comment \
+__When__ the comment exceeds 1000 characters \
+__Then__ the comment should not be saved \
+__And__ the visitor should see an error message
+
+__Given__ a visitor leave a comment \
+__When__ the comment is empty \
+__Then__ the comment should not be saved \
+__And__ the visitor should see an error message
+
 ## edit_a_comment :
 __Given__ a visitor wants to modify his comment \
 __When__ he click on the pencil icon \
 __And__ rewrite the comment
-__And__ validate 
+__And__ validate
 __Then__ the system update the db
 __And__ reload the page to show the edit message
 
@@ -132,14 +149,14 @@ __And__ display it in the blog
 
 __Given__ the connected bloger to the django admin want to create a category
 __when__ he creates the category
-__Then__ it is record in db 
+__Then__ it is record in db
 __And__ display to the blog page
 
 __Given__ the blogger want to programize the send of an article
 __When__ he creates the article and choice a date of publication
 __Then__ the system send the article to the blog when the date is comming
 
-## User stories bonus (blog) : 
+## User stories bonus (blog) :
 
 __As a__ visitor \
 __I want__ to consult an article \
@@ -163,4 +180,4 @@ __In order__ to deal with a larger subject
 
 __As a__ bloger \
 __I want__ to programize a publication of article \
-__In order__ to write my subjects in advance 
+__In order__ to write my subjects in advance
